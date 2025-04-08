@@ -1,0 +1,17 @@
+---
+const { text } = Astro.props;
+---
+
+<button class="red-button">
+    {text}
+</button>
+
+<style>
+    .red-button {
+        margin: 5%;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(189, 198, 209);
+    }
+</style>

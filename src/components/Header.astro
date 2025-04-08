@@ -1,0 +1,41 @@
+---
+import { MessageCircleHeart } from '@lucide/astro';
+---
+
+<header class="header-grid">
+    <div class="logo"><MessageCircleHeart class="heart-icon" /></div>
+    <div class="name">Kate Ryan</div>
+    <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+<style>
+
+    .header-grid {
+        display: grid;
+        grid-template-columns: .1fr .5fr 5fr; /* Adjust the column sizes as needed */
+        align-items: center;
+        gap: 1rem; /* Adjust the gap between grid items */
+        padding: 1rem;
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+
+    .name {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .navigation {
+        grid-column: 3;
+        display: flex;
+        justify-content: center;
+        gap: 8rem;
+    }
+
+</style>

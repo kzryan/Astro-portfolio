@@ -1,16 +1,28 @@
 ---
+import Layout from "../layouts/Layout.astro"
+import List from "../components/List.astro"
+import Table from "../components/Table.astro"
+import Button from "../components/Button.astro"
+
+const myItems = [
+  { title: 'Item 1', description: 'Description for Item 1' },
+  { title: 'Item 2', description: 'Description for Item 2' },
+  { title: 'Item 3', description: 'Description for Item 3' },
+];
+
+const columns = ['Name', 'Age', 'Occupation'];
+const rows = [
+  { Name: 'John Doe', Age: 30, Occupation: 'Engineer' },
+  { Name: 'Jane Smith', Age: 25, Occupation: 'Designer' },
+  { Name: 'Sam Johnson', Age: 40, Occupation: 'Manager' },
+];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-	<h1>My Astro Site</h1>
-  </body>
-</html>
+  <Layout>
+    <Button text="Click Me!" />
+    <List items={myItems}></List>
+    <Table columns={columns} rows={rows}></Table>
+  </Layout>
+
+
+
