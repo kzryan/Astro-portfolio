@@ -1,0 +1,70 @@
+---
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+    // Do something with the data
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+<h1>Get In Touch!</h1>
+<form method="POST">
+  <label>
+    Name:
+    <input type="text" name="name" required />
+  </label>
+  <label>
+    Email:
+    <input type="email" name="email" required />
+  </label>
+  <label>
+    Message:
+    <textarea id="message" placeholder="Enter your message here..." required></textarea>
+  </label>
+  <button>Submit</button>
+</form>
+
+<style>
+    h1{ 
+        text-align: center;
+        color:#E3AFBC;
+    }
+
+    form{
+        color:#E3AFBC;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; /* Adjust the gap between form elements */
+    }
+
+    form label{
+    }
+
+    input {
+        border-radius: 5px;
+    }
+
+    textarea {
+        border-radius: 5px;
+        width: 100%; /* Make the textarea full width */
+        height: 150px; /* Set a fixed height */
+        resize: vertical; /* Allow vertical resizing */
+    }
+
+    button {
+        border-radius: 5px;
+        align-self: center;
+        width:20%;
+        height:30px;
+        color:#E3AFBC;
+        background-color: #9A1750;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>

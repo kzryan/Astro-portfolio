@@ -6,20 +6,25 @@ import { MessageCircleHeart } from '@lucide/astro';
     <div class="logo"><MessageCircleHeart class="heart-icon" /></div>
     <div class="name">Kate Ryan</div>
     <nav class="navigation">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
     </nav>
 </header>
 <style>
 
     .header-grid {
         display: grid;
-        grid-template-columns: .1fr .5fr 5fr; /* Adjust the column sizes as needed */
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+        grid-auto-flow: row dense;
         align-items: center;
-        gap: 1rem; /* Adjust the gap between grid items */
+        gap: 1rem;
         padding: 1rem;
+        color: #9A1750;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-weight: bold;
     }
 
     .logo {
@@ -35,7 +40,49 @@ import { MessageCircleHeart } from '@lucide/astro';
         grid-column: 3;
         display: flex;
         justify-content: center;
-        gap: 8rem;
+        gap: 1rem; /* Adjust the gap for better spacing */
+    }
+
+    .navigation a {
+        color: #9A1750;
+        text-decoration: none;
+    }
+    /* mouse over link */
+    .navigation a:hover {
+        color: #EE4C7C;
+    }
+
+    .navigation a:active {
+        color: #EE4C7C;
+    }
+
+    /* Media Query for Tablets */
+    @media (max-width: 768px) {
+        .header-grid {
+            grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+        }
+
+        .navigation {
+            grid-column: span 3;
+            justify-content: space-around;
+        }
+    }
+
+    /* Media Query for Mobile Phones */
+    @media (max-width: 480px) {
+        .header-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .logo, .name, .navigation {
+            grid-column: span 1;
+            text-align: center;
+        }
+
+        .navigation {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
     }
 
 </style>
