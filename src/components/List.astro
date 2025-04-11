@@ -6,7 +6,6 @@ const { items } = Astro.props as Props;
 ---
 
 <ul>
-    <h1>My Skills</h1>
   {items.map(item => (
     <li>
       <strong>{item.title}:</strong> {item.description}
@@ -15,7 +14,6 @@ const { items } = Astro.props as Props;
 </ul>
 
 <style>
-    <style>
     ul {
         list-style-type: none;
         padding: 0;
