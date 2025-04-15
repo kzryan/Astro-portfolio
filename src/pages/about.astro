@@ -4,8 +4,7 @@ import List from "../components/List.astro"
 
 const myItems = [
   { title: 'Colorado Academy', description: 'Description for Item 1' },
-  { title: 'Item 2', description: 'Description for Item 2' },
-  { title: 'Item 3', description: 'Description for Item 3' },
+  { title: 'Colorado State University', description: 'Description for Item 2' }
 ];
 
 ---
@@ -13,12 +12,8 @@ const myItems = [
 
 <Layout>
     <div class="about-container">
-        <img src="src/assets/temp_headshot.png" alt="Headshot of Kate Ryan" class="headshot" />
+        <img src="src/assets/headshot.png" alt="Headshot of Kate Ryan" class="headshot" />
         <div class="about-sec">
-            <h1>Education</h1>
-            <List items={myItems}></List>
-            <h1>Experience</h1>
-            <p>Experience Information here</p>
         </div>
     </div>
 </Layout>
@@ -27,12 +22,11 @@ const myItems = [
     .about-container {
         display:flex;
         color: #E3AFBC;
+        font-family: "Onest", sans-serif;
     }
 
     .headshot {
         position: sticky;
-        top:0%;
-        left:0%;
         -webkit-filter: drop-shadow(3px 2px 0 #EE4C7C)
                   drop-shadow(-2px -2px 0 #EE4C7C);
         filter: drop-shadow(3px 1px 0 #EE4C7C) 

@@ -1,26 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import List from "../components/List.astro"
-import Table from "../components/Table.astro"
-import Button from "../components/Button.astro"
 
-const myItems = [
-  { title: 'Item 1', description: 'Description for Item 1' },
-  { title: 'Item 2', description: 'Description for Item 2' },
-  { title: 'Item 3', description: 'Description for Item 3' },
-];
-
-const columns = ['Name', 'Age', 'Occupation'];
-const rows = [
-  { Name: 'John Doe', Age: 30, Occupation: 'Engineer' },
-  { Name: 'Jane Smith', Age: 25, Occupation: 'Designer' },
-  { Name: 'Sam Johnson', Age: 40, Occupation: 'Manager' },
-];
 ---
 
   <Layout>
-    <List items={myItems}></List>
-    <Table columns={columns} rows={rows}></Table>
   </Layout>
 
 
