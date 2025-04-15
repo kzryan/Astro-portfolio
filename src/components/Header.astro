@@ -34,10 +34,6 @@ import { MessageCircleHeart } from '@lucide/astro';
         font-family: "Onest", sans-serif;
         font-size: x-large;
     }
-    .name, .logo{
-        color:rgb(255, 180, 180);
-        font-weight:bold;
-    }
 
     .header-content {
         display: flex;
@@ -78,9 +74,26 @@ import { MessageCircleHeart } from '@lucide/astro';
     
     .name{
         margin-right: 3%;
-        color:black;
         text-decoration: underline;
+        color: #9A1750;
+        font-weight: bolder;
     }
+
+    @media (max-width: 1200px) {
+            .name {
+                color: black; /* Text color for smaller viewports */
+            }
+        }
+    @media (max-width: 670px) {
+            .navigation a {
+                color: black;
+                text-decoration: none;
+            }
+            /* mouse over link */
+            .navigation a:hover {
+                color: #EE4C7C;
+            }
+        }
 
 
 </style>
