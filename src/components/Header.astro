@@ -65,20 +65,24 @@ import { MessageCircleHeart } from '@lucide/astro';
     }
 
     .navigation a {
+        flex: 1;
         color: #9A1750;
         text-decoration: none;
         border-radius: 5px;
         text-align: center;
-        
+        padding: 10px 10px;
     }
     /* mouse over link */
     .navigation a:hover {
         color: #EE4C7C;
+        background-color: black;
         transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
         box-shadow: 0 10px 20px #E3AFBCAA;
+        
     }
     
     .name{
+        flex:
         margin-right: 3%;
         text-decoration: underline;
         color: #9A1750;
@@ -98,6 +102,7 @@ import { MessageCircleHeart } from '@lucide/astro';
             /* mouse over link */
             .navigation a:hover {
                 color: #000000;
+                background-color: #9A1750;
                 transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
                 box-shadow: 0 10px 20px #000000AA;
             }
