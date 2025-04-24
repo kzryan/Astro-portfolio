@@ -1,20 +1,11 @@
 ---
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-    const name = data.get("name");
-    const email = data.get("email");
-    const message = data.get("message");
-    // Do something with the data
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
-  }
+export interface Props {
+  action: string;
 }
+const { action } = Astro.props;
 ---
 <h1>Get In Touch!</h1>
-<form method="POST">
+<form method="POST" action={action}>
   <label>
     Name:
     <input type="text" name="name" required />
@@ -25,7 +16,7 @@ if (Astro.request.method === "POST") {
   </label>
   <label>
     Message:
-    <textarea id="message" placeholder="Enter your message here..." required></textarea>
+    <textarea name="message" placeholder="Enter your message here..." required></textarea>
   </label>
   <button>Submit</button>
 </form>
@@ -61,6 +52,7 @@ if (Astro.request.method === "POST") {
     }
 
     button {
+        border: none;
         border-radius: 5px;
         align-self: center;
         padding: 1% 2%;
