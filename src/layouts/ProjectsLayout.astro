@@ -12,13 +12,14 @@ import Footer from '../components/Footer.astro';
 	<title>Kate Ryan</title>
 	</head>
 	<body class="body">
-	<div class="grid-container">
 		<Header class="header" />
-		<div class="page">
-		<slot />
-		</div>
-	</div>
-	<Footer class="footer" />
+    <div class="page">
+      <div class="tab-holder"> <slot name="tabs" /> </div>
+        <div class="content">
+          <slot /> <!-- Default slot -->
+        </div>
+	  </div>
+	  <Footer class="footer" />
 	</body>
 </html>
 
@@ -31,6 +32,9 @@ body {
 }
 
 .body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+  min-height: 100vh;
   width: 100%;
   height: 100%;
   background-image: url('src/assets/mirror-bg.jpg');
@@ -39,24 +43,39 @@ body {
 }
 
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
-  min-height: 100vh;
-  width: 100%;
-}
-
 .header {
   grid-row: 1;
 }
 
+.tab-holder{
+  position:relative;
+  top:10%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content:center; /* Spread out the elements */
+  align-items: center;
+  font-family: "Onest", sans-serif;
+  background-color: #e37eab00;
+  z-index: 1;
+}
+
 .page {
   grid-row: 2;
+  position: relative;
   margin: 0 2%;
   border-radius: 5px;
-  background-color: #1a1a1a99;
-  border: 3px solid #EE4C7C;
   position: relative;
+  z-index: 2;
+}
+
+.content {
+  margin: 0 2%;
+  border-radius: 5px;
+  background-color: #e37eab;
+  border: 3px solid #EE4C7C;
+  padding: 10% 5%;
+  z-index: 0;
 }
 
 .footer {

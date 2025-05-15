@@ -4,65 +4,65 @@ import ProjectsLayout from "../layouts/ProjectsLayout.astro"
 
 
 <ProjectsLayout>
-<div class="tab-holder">
-    <a class="tab" href="/video-games">
-        <button>
-            <h1 class="tab-title">Video Games</h1>
-        </button>
-    </a>
-    <a class="tab" href="/3d-modeling">
-        <button>
-            <h1 class="tab-title">3D Modeling</h1>
-        </button>
-    </a>
-    <a class="tab" href="/graphic-design">
-        <button>
-            <h1 class="tab-title">Graphic Design</h1>
-        </button>
-    </a>
-    <a class="tab" href="/functional-programs">
-        <button>
-            <h1 class="tab-title">Programs</h1>
-        </button>
-    </a>
+<a slot="tabs" class="current-tab" href="/video-games">
+    <h1>Video Games</h1>
+</a>
+<a slot="tabs" href="/3d-modeling">
+    <h1>3D Modeling</h1>
+</a>
+<a slot="tabs" href="/graphic-design">
+    <h1>Graphic Design</h1>
+</a>
+<a slot="tabs" href="/functional-programs" >
+    <h1>Programs</h1>
+</a>
+
+<div class = "content-holder">
+    <h2>Model 1</h2>
+    <h2>Model 2</h2>
+    <h2>Model 3</h2>
+    <h2>Model 4</h2>
+    <h2>Model 5</h2>
+    <h2>Model 6</h2>
+    <h2>Model 7</h2>
+    <h2>Model 8</h2>
 </div>
-<div class = "video-games-holder">
-    <h2>Game 1</h2>
-</div>
+
 </ProjectsLayout>
 
 <style>
-    .tab-holder{
-        position: relative;
-        top:-1%;
-        left: 0%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; /* Spread out the elements */
-        align-items: center; /* Vertically center the elements */
-        font-family: "Onest", sans-serif;
+    
+
+    a:hover h1{
+        color: #5d001E; 
     }
 
-    .tab{
-        flex: 1;
+    a{
         font-family: "Onest", sans-serif;
-        background-color: black;     
-    }
-
-    h1{
-        font-family: "Onest", sans-serif;
-        color:#EE4C7C
-    }
-
-    button {
-        height: 100%;
-        width: 100%;
+        color: black;    
         border-radius: 5%;
-        border-top: 3px solid #EE4C7C;
-        border-right: 3px solid #EE4C7C;
+        padding: 1% 1%;
+        text-decoration: none;
+        background-color: #e37eab;
+        border-radius: 5px;
+        border: 3px solid #EE4C7C;
         border-bottom: none;
-        border-left: none;
-        background-color: #1a1a1a99;
+    }
+
+    .current-tab{
+        font-family: "Onest", sans-serif;
+        background-color: #e37eab; 
+        border-bottom: none;
+    }
+    .current-tab h1{
+        font-family: "Onest", sans-serif;
+        color: #5d001E; 
+    }
+
+    .content-holder{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        gap: 1rem;
     }
 
 </style>
