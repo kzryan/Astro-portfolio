@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Table from "../components/Table.astro"
+
+
+const columns = ['Name', 'Age', 'Occupation'];
+const rows = [
+  { name: 'John Doe', age: 30, occupation: 'Engineer' },
+  { name: 'Jane Smith', age: 25, occupation: 'Designer' },
+  // Add more rows here
+];
+---
+
+<Layout>
+    <Table columns={columns} rows={rows}></Table>
+</Layout>
+

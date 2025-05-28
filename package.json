@@ -9,9 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.0",
     "@lucide/astro": "^0.487.0",
     "@sendgrid/mail": "^8.1.5",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
     "astro": "^5.5.6",
-    "lucide-react": "^0.487.0"
+    "lucide-react": "^0.487.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

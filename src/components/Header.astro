@@ -1,5 +1,7 @@
 ---
 import { MessageCircleHeart } from '@lucide/astro';
+import ThemeToggle from '../components/themeToggle.jsx';
+
 ---
 
 <header class="header">
@@ -22,6 +24,7 @@ import { MessageCircleHeart } from '@lucide/astro';
             <a href="/services">Services</a>
             <a href="/contact">Contact</a>
         </nav>
+        <ThemeToggle client:load />
     </div>
 </header>
 <style>
