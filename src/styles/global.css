@@ -1,24 +1,20 @@
-/*
-color pallete: 
-#5d001E
-#E3E2DF
-#E3AFBC
-#9A1750
-#EE4C7C
-*/
 
 :root {
-  --bg-color: white;
-  --text-color: black;
+  --bg-color: rgb(235, 235, 235);
+  --text-color: #1d1d1d;
 }
 
 .dark {
-  --bg-color: #1a1a1a;
-  --text-color: white;
+  --bg-color: #1d1d1d;
+  --text-color: rgb(235, 235, 235);
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--text-color);
 }

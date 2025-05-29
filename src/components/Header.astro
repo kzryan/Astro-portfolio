@@ -6,6 +6,7 @@ import ThemeToggle from '../components/themeToggle.jsx';
 
 <header class="header">
     <div class = "header-content">
+        <div class="toggle"><ThemeToggle client:load /></div>
         <div class="socials">
             <a href="https://github.com/kzryan" target="_blank">
                 <img src="src/assets/github-icon.png" alt="github" height="40" width="40">
@@ -24,10 +25,13 @@ import ThemeToggle from '../components/themeToggle.jsx';
             <a href="/services">Services</a>
             <a href="/contact">Contact</a>
         </nav>
-        <ThemeToggle client:load />
     </div>
 </header>
 <style>
+    .toggle {
+        
+    }
+
     .header {
         width: 100%;
         position: sticky; /* Make the header sticky */
@@ -63,13 +67,11 @@ import ThemeToggle from '../components/themeToggle.jsx';
     }
 
     .socials a:hover {
-        color: #EE4C7C;
         
     }
 
     .navigation a {
         flex: 1;
-        color: #9A1750;
         text-decoration: none;
         border-radius: 5px;
         text-align: center;
@@ -77,10 +79,7 @@ import ThemeToggle from '../components/themeToggle.jsx';
     }
     /* mouse over link */
     .navigation a:hover {
-        color: #EE4C7C;
-        background-color: black;
         transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
-        box-shadow: 0 10px 20px #E3AFBCAA;
         
     }
     
@@ -88,26 +87,20 @@ import ThemeToggle from '../components/themeToggle.jsx';
         flex:
         margin-right: 3%;
         text-decoration: underline;
-        color: #9A1750;
         font-weight: bolder;
     }
 
     @media (max-width: 1200px) {
             .name {
-                color: black; /* Text color for smaller viewports */
             }
         }
     @media (max-width: 670px) {
             .navigation a {
-                color: black;
                 text-decoration: none;
             }
             /* mouse over link */
             .navigation a:hover {
-                color: #000000;
-                background-color: #9A1750;
                 transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
-                box-shadow: 0 10px 20px #000000AA;
             }
         }
 
